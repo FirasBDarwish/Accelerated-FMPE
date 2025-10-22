@@ -10,15 +10,15 @@ The implementation builds on the [**dingo**](https://github.com/dingo-gw/dingo) 
 ## 🚀 Key Novelties
 This implementation introduces several enhancements that make Flow Matching Posterior Estimation (FMPE) faster, more scalable, and easier to extend:
 1. **Accelerated GPU Parallelization**
-  - Training and evaluation pipelines are fully compatible with multi-GPU systems.
-  - Batch processing is managed efficiently through provided SLURM job scripts (scripts/training.sh, scripts/evaluation.sh), which can be adapted for any HPC cluster or local GPU setup.
+    - Training and evaluation pipelines are fully compatible with multi-GPU systems.
+    - Batch processing is managed efficiently through provided SLURM job scripts (scripts/training.sh, scripts/evaluation.sh), which can be adapted for any HPC cluster or local GPU setup.
 2. **Automated Hyperparameter Search Space**
-  - The train_all.py orchestrator automatically defines and sweeps over a structured hyperparameter space.
-  - Parameters such as learning rate, batch size, network width/depth, and time prior exponents are explored systematically to identify the best-performing configuration.
-3. **Centralized Evaluation Workflow**
-  - All evaluation logic is consolidated in a single Python entry point (eval), simplifying reproducibility and allowing consistent comparison across models, datasets, and budgets.
+    - The train_all.py orchestrator automatically defines and sweeps over a structured hyperparameter space.
+    - Parameters such as learning rate, batch size, network width/depth, and time prior exponents are explored systematically to identify the best-performing configuration.
+  3. **Centralized Evaluation Workflow**
+    - All evaluation logic is consolidated in a single Python entry point (eval), simplifying reproducibility and allowing consistent comparison across models, datasets, and budgets.
 4. **Bimodal Example Demonstration**
-  - A dedicated bimodal.py script illustrates FMPE’s capacity to model bimodal distributions, comparing FMPE against traditional forward and reverse KL-divergence minimization approaches.
+    - A dedicated bimodal.py script illustrates FMPE’s capacity to model bimodal distributions, comparing FMPE against traditional forward and reverse KL-divergence minimization approaches.
 
 ---
 
