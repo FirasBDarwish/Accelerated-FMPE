@@ -15,7 +15,6 @@
 module purge
 
 # Activate virtual environment (if needed)
-source /share/apps/NYUAD5/miniconda/3-4.11.0/bin/activate
 conda activate fmpe
 
 # --- Confirm the environment ---
