@@ -161,6 +161,18 @@ Outputs include posterior estimates, evaluation metrics, and visualizations (if 
 
 ---
 
+## Bimodal Case:
+
+This repository also contains bimodal.py
+
+### Bimodal Probability Mass Coverage Example
+A Gaussian distribution is fit to a bimodal distribution using three methods. The first two are minimising the forward and reverse KL divergences, these divergences are estimated with Monte Carlo. The final method is using FMPE.
+The predicted vector field $v_t(\theta_t)$ is given as a function of two learnable parameters $\hat{\mu}$ and $\hat{\sigma}$.
+$$v_t(\theta_t)=\frac{(\sigma_t^2 + (t \hat{\sigma})^2 - \sigma_t)\theta_t + t \hat{\mu}\hat{\sigma}}{t\cdot(\sigma_t^2 + (t\hat{\sigma})^2)}$$
+
+### Two Moons FMPE Example
+The distribution we are trying to approximate is the two moons dataset from <code>sklearn</code> and the estimator of the vector field is a neural network. The neural network is trained by minimising the MSE between the predicted and true vector fields.
+
 ## 📄 References
 
 * Wildberger et al., *Flow Matching for Scalable Simulation-Based Inference*, NeurIPS 2023
