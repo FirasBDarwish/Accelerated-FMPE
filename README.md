@@ -10,18 +10,26 @@ The implementation builds on the [**dingo**](https://github.com/dingo-gw/dingo) 
 🧩 Environment Setup
 Before training or evaluation, create a Conda environment named fmpe and install all dependencies.
 1. Create and activate the environment
+```bash
 conda create -n fmpe python=3.10 -y
 conda activate fmpe
-2. Install dependencies from dingo/pyproject.toml
+```
+3. Install dependencies from dingo/pyproject.toml
 Make sure you have pip ≥ 23 and setuptools ≥ 65:
+```bash
 pip install --upgrade pip setuptools wheel
+```
 Then install Dingo and all required dependencies (both regular and dev):
+```bash
 # From within your project root
 cd dingo
 pip install -e ".[dev]"
-💡 This will install all runtime dependencies plus development tools (testing, linting, etc.) as specified in dingo/pyproject.toml.
+```
+- 💡 This will install all runtime dependencies plus development tools (testing, linting, etc.) as specified in dingo/pyproject.toml.
 You can confirm successful setup with:
+```bash
 python -c "import torch; print('Torch:', torch.__version__, 'CUDA available:', torch.cuda.is_available())"
+```
 
 ---
 
