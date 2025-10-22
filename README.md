@@ -15,7 +15,7 @@ This implementation introduces several enhancements that make Flow Matching Post
 2. **Automated Hyperparameter Search Space**
     - The train_all.py orchestrator automatically defines and sweeps over a structured hyperparameter space.
     - Parameters such as learning rate, batch size, network width/depth, and time prior exponents are explored systematically to identify the best-performing configuration.
-  3. **Centralized Evaluation Workflow**
+3. **Centralized Evaluation Workflow**
     - All evaluation logic is consolidated in a single Python entry point (eval), simplifying reproducibility and allowing consistent comparison across models, datasets, and budgets.
 4. **Bimodal Example Demonstration**
     - A dedicated bimodal.py script illustrates FMPE’s capacity to model bimodal distributions, comparing FMPE against traditional forward and reverse KL-divergence minimization approaches.
