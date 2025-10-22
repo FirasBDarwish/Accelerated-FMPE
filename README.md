@@ -7,8 +7,9 @@ The implementation builds on the [**dingo**](https://github.com/dingo-gw/dingo) 
 
 ---
 
-🧩 Environment Setup
+## 🧩 Environment Setup
 Before training or evaluation, create a Conda environment named fmpe and install all dependencies.
+
 1. Create and activate the environment
 ```bash
 conda create -n fmpe python=3.10 -y
