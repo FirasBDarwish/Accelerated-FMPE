@@ -1,0 +1,41 @@
+model:
+  posterior_kwargs:
+    activation: gelu
+    batch_norm: false
+    context_with_glu: false
+    dropout: 0.0
+    hidden_dims:
+      - 16
+      - 32
+      - 64
+      - 64
+      - 64
+      - 64
+      - 64
+      - 64
+      - 32
+      - 16
+    number_of_blocks: 10
+    sigma_min: 0.0001
+    theta_with_glu: false
+    time_prior_exponent: 0
+    type: DenseResidualNet
+  type: flow_matching
+
+task:
+  name: two_moons
+  num_train_samples: 1000
+
+training:
+  batch_size: 8
+  early_stopping: true
+  epochs: 100
+  num_workers: 4
+  optimizer:
+    lr: 0.0005
+    type: adam
+  scheduler:
+    factor: 0.2
+    patience: 1
+    type: reduce_on_plateau
+  train_fraction: 0.95
