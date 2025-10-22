@@ -27,6 +27,7 @@ cd dingo
 pip install -e ".[dev]"
 ```
 - 💡 This will install all runtime dependencies plus development tools (testing, linting, etc.) as specified in dingo/pyproject.toml.
+  
 You can confirm successful setup with:
 ```bash
 python -c "import torch; print('Torch:', torch.__version__, 'CUDA available:', torch.cuda.is_available())"
